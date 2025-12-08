@@ -2,7 +2,7 @@
 #CSI261
 #Course Project Phase 4
 
- File: user_auth_system.py
+#File: user_auth_system.py
 
 def load_existing_users(filename):
     """Load existing user IDs from the file into a list."""
@@ -60,3 +60,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

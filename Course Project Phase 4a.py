@@ -3,11 +3,11 @@
 #Course Project Phase 4
 
 #File:Secure_card_app.apy
- 
-    def __init__(self, user_id, password, authorization):
-        self.user_id = user_id
-        self.password = password
-        self.authorization = authorization
+class Login:
+   def __init__(self, user_id, password, authorization):
+       self.user_id = user_id
+       self.password = password
+       self.authorization = authorization
 
 def load_user_credentials(filename):
     """Load user credentials from file into a list of dictionaries."""
@@ -84,12 +84,12 @@ def main():
         print(f"Password: {user.password}\n")
 
         if user.authorization == 'Admin':
-            print("Access Level: Admin — You can enter and view data.")
+            print("Access Level: Admin - You can enter and view data.")
             existing_ids = [u['user_id'] for u in load_user_credentials(filename)]
             enter_data(filename, existing_ids)
             display_data(filename)
         elif user.authorization == 'User':
-            print("Access Level: User — You can view data only.")
+            print("Access Level: User - You can view data only.")
             display_data(filename)
         else:
             print("Unknown authorization level. Access denied.")
